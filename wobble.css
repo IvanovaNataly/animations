@@ -1,0 +1,48 @@
+button {
+    background-color: white;
+    border: none;
+}
+
+@keyframes icon-wobble-horizontal {
+  16.65%   {transform: translateX(8px);}
+  33.3%  {transform: translateX(-5px);}
+  49.95% {transform: translateX(6px);}
+  66.6% {transform: translateX(-2px);}
+  83.25% {transform: translateX(1px);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes icon-wobble-horizontal-back {
+  16.65%   {transform: translateX(-8px);}
+  33.3%  {transform: translateX(5px);}
+  49.95% {transform: translateX(-6px);}
+  66.6% {transform: translateX(2px);}
+  83.25% {transform: translateX(-1px);}
+  100% {transform: translateX(0);}
+}
+
+.c_btnDefinitions {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 2rem;
+  background-image: url(side_panel_right.png);
+  background-repeat: no-repeat;
+  background-size: 2.4rem;
+  vertical-align: middle;
+  transition: all 0.5s;
+}
+
+.c_btnDefinitions:hover {
+  animation-name: icon-wobble-horizontal;
+  animation-delay: 0.2s;
+  animation-duration: 1.2s;
+}
+
+.c_btnDefinitions.c_btnRotate:hover {
+  animation: none;
+}
+
+.c_btnRotate {
+  transform: rotate(-180deg);
+}
